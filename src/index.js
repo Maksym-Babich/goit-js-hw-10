@@ -12,7 +12,6 @@ const refs = {
 };
 
 const listBuilder = function (data) {
-  console.log('listbuilder');
   refs.list.innerHTML = data
     .map(country => {
       return `<li class='list__item'><img heigth='30px' width='30px' src=${country.flags.svg} class='list__countryImage'><span class='list__countryName'>${country.name.official}</span></li>`;
@@ -21,7 +20,6 @@ const listBuilder = function (data) {
 };
 
 const countryCardBuilder = function (data) {
-  console.log('cardbuilder');
   refs.card.innerHTML = `<div class='card__wrapper'><img class='card__countryImage' src=${
     data[0].flags.svg
   }><span class='card__countryName'>${
@@ -36,7 +34,6 @@ const countryCardBuilder = function (data) {
 };
 
 const errorHandler = function (error) {
-  console.log(error);
   Notiflix.Notify.failure('Oops, there is no country with that name');
 };
 
